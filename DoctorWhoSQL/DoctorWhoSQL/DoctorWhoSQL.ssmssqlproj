@@ -25,11 +25,41 @@
           <AssociatedConnUserName />
           <FullPath>DoctorWhoDatabaseCreateQuery.sql</FullPath>
         </FileNode>
+        <FileNode Name="DoctorWhoDeleteUnappearingCompanionsQuery.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:desktop-gbumlhv:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>desktop-gbumlhv</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>DoctorWhoDeleteUnappearingCompanionsQuery.sql</FullPath>
+        </FileNode>
+        <FileNode Name="DoctorWhoEpisodeCompanionsFunctionQuery.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:desktop-gbumlhv:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>desktop-gbumlhv</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>DoctorWhoEpisodeCompanionsFunctionQuery.sql</FullPath>
+        </FileNode>
+        <FileNode Name="DoctorWhoEpisodeEnemiesFunctionQuery.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:desktop-gbumlhv:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>desktop-gbumlhv</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>DoctorWhoEpisodeEnemiesFunctionQuery.sql</FullPath>
+        </FileNode>
+        <FileNode Name="DoctorWhoEpisodeViewQuery.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:desktop-gbumlhv:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>desktop-gbumlhv</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>DoctorWhoEpisodeViewQuery.sql</FullPath>
+        </FileNode>
         <FileNode Name="DoctorWhoInsertQuery.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:desktop-gbumlhv:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>desktop-gbumlhv</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>DoctorWhoInsertQuery.sql</FullPath>
+        </FileNode>
+        <FileNode Name="DoctorWhoSummaryStoredProcedure.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:desktop-gbumlhv:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>desktop-gbumlhv</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>DoctorWhoSummaryStoredProcedure.sql</FullPath>
         </FileNode>
         <FileNode Name="DoctorWhoTablesCreateQueries.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:desktop-gbumlhv:True</AssociatedConnectionMoniker>
@@ -37,11 +67,11 @@
           <AssociatedConnUserName />
           <FullPath>DoctorWhoTablesCreateQueries.sql</FullPath>
         </FileNode>
-        <FileNode Name="DoctorWhoUpdateNoDoctorEpisodeQuery.sql">
+        <FileNode Name="DoctorWhoUpdateNoDoctorEpisodeTitleQuery.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:desktop-gbumlhv:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>desktop-gbumlhv</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>DoctorWhoUpdateNoDoctorEpisodeQuery.sql</FullPath>
+          <FullPath>DoctorWhoUpdateNoDoctorEpisodeTitleQuery.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
