@@ -24,7 +24,7 @@ CREATE TABLE tblEpisode
 	Title VARCHAR(255),
 	EpisodeDate DATE,
 	AuthorId INT NOT NULL,
-	DoctorId INT NOT NULL,
+	DoctorId INT,
 	Notes VARCHAR(255)
 )
 
