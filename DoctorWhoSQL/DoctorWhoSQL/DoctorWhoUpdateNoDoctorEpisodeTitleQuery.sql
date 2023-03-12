@@ -1,4 +1,4 @@
 UPDATE tblEpisode 
 SET Title = Title + '_CANCELLED'
-Where DoctorId IS NULL
+WHERE DoctorId IS NULL
 GO
