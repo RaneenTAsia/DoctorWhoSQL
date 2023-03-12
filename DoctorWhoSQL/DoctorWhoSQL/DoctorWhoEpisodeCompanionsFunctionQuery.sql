@@ -13,4 +13,7 @@ RETURNS VARCHAR(255) AS
 			WHERE EC.EpisodeId = @EpisodeId
 		RETURN @RESULT
 	END
-	GO
+GO
+
+SELECT dbo.fnCompanions(2)
+GO

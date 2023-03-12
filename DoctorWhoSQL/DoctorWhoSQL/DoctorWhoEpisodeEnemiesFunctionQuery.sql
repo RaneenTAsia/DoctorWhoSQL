@@ -13,4 +13,7 @@ RETURNS VARCHAR(255) AS
 			WHERE EE.EpisodeId = @EpisodeId
 		RETURN @RESULT
 	END
-	GO
+GO
+
+SELECT dbo.fnEnemies(2)
+GO
