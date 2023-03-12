@@ -1,4 +1,3 @@
-
 -- procedure inserts a new enemy
 DROP PROCEDURE IF EXISTS p_tblEnemy_insert;
 GO
@@ -8,6 +7,7 @@ AS BEGIN
   INSERT INTO [dbo].[tblEnemy] ( EnemyName, Description)
   VALUES (@EnemyName, @Description);
 END;
+GO
  
  EXEC p_tblEnemy_insert @EnemyName = 'Za', @Description = 'Desires Power';
  EXEC p_tblEnemy_insert @EnemyName = 'Kal', @Description = 'Desires Power';
@@ -27,6 +27,7 @@ AS BEGIN
   INSERT INTO [dbo].[tblCompanion] ( CompanionName, WhoPlayed)
   VALUES (@CompanionName, @WhoPlayed);
 END;
+GO
 
  EXEC p_tblCompanion_insert @CompanionName = 'Barbara Wright', @WhoPlayed = 'Jacqueline Hill';
  EXEC p_tblCompanion_insert @CompanionName = 'Ian Chesterton', @WhoPlayed = 'William Russel';
@@ -46,6 +47,7 @@ AS BEGIN
   INSERT INTO [dbo].[tblDoctor] ( DoctorNumber, DoctorName, BirthDate, FirstEpisodeDate, LastEpisodeDate)
   VALUES (@DoctorNumber, @DoctorName, @BirthDate, @FirstEpisodeDate, @LastEpisodeDate);
 END;
+GO
  
  EXEC p_tblDoctor_insert @DoctorNumber = 1, @DoctorName = 'The First Doctor', @BirthDate=null, @FirstEpisodeDate=null, @LastEpisodeDate=null;
  EXEC p_tblDoctor_insert @DoctorNumber = 2, @DoctorName = 'The Second Doctor', @BirthDate=null, @FirstEpisodeDate=null, @LastEpisodeDate=null;
@@ -65,6 +67,7 @@ AS BEGIN
   INSERT INTO [dbo].[tblAuthor] (AuthorName)
   VALUES (@AuthorName);
 END;
+GO
  
  EXEC p_tblAuthor_insert @AuthorName = 'Anthony Coburn';
  EXEC p_tblAuthor_insert @AuthorName = 'Terry Nation';
@@ -84,13 +87,15 @@ AS BEGIN
   INSERT INTO [dbo].[tblEpisode] (SeriesNumber, EpisodeNumber, EpisodeType, Title, EpisodeDate, AuthorID, DoctorId, Notes)
   VALUES (@SeriesNumber, @EpisodeNumber, @EpisodeType, @Title, @EpisodeDate,@AuthorId, @DoctorId, @Notes);
 END;
+GO
  
  EXEC p_tblEpisode_insert @SeriesNumber=1 , @EpisodeNumber = 1, @EpisodeType = 'Mystery', @Title = 'An Unearthly Child', @EpisodeDate = '1963-09-07',@AuthorId = 1, @DoctorId = 1, @Notes = null;
  EXEC p_tblEpisode_insert @SeriesNumber=1 , @EpisodeNumber = 2, @EpisodeType = 'Mystery', @Title = 'The Cave of Skulls' , @EpisodeDate = '1963-11-30',@AuthorId = 1, @DoctorId = 1, @Notes = null;
  EXEC p_tblEpisode_insert @SeriesNumber=1 , @EpisodeNumber = 3, @EpisodeType = 'Mystery', @Title = 'The Forest of Fear' , @EpisodeDate = '1963-12-07',@AuthorId = 1, @DoctorId = 1, @Notes = null;
- EXEC p_tblEpisode_insert @SeriesNumber=1 , @EpisodeNumber = 4, @EpisodeType = 'Mystery', @Title = 'The Firemaker' , @EpisodeDate = '1963-12-14',@AuthorId = 1, @DoctorId = 1, @Notes = null;
- EXEC p_tblEpisode_insert @SeriesNumber=1 , @EpisodeNumber = 5, @EpisodeType = 'Mystery', @Title = 'The Dead Planet' , @EpisodeDate = '1963-12-21',@AuthorId = 1, @DoctorId = 1, @Notes = null;
-
+ EXEC p_tblEpisode_insert @SeriesNumber=1 , @EpisodeNumber = 4, @EpisodeType = 'Mystery', @Title = 'The Firemaker' , @EpisodeDate = '1963-12-14',@AuthorId = 2, @DoctorId = 1, @Notes = null;
+ EXEC p_tblEpisode_insert @SeriesNumber=1 , @EpisodeNumber = 5, @EpisodeType = 'Mystery', @Title = 'The Dead Planet' , @EpisodeDate = '1963-12-21',@AuthorId = 3, @DoctorId = 1, @Notes = null;
+ EXEC p_tblEpisode_insert @SeriesNumber=1 , @EpisodeNumber = 6, @EpisodeType = 'Mystery', @Title = 'The Survivors' , @EpisodeDate = '1963-12-28',@AuthorId = 3, @DoctorId = null, @Notes = null;
+ 
  Select * from tblEpisode;
 Go
 
@@ -103,6 +108,7 @@ AS BEGIN
   INSERT INTO [dbo].[tblEpisodeEnemy] (EpisodeId, EnemyId)
   VALUES (@EpisodeId, @EnemyId);
 END;
+GO
  
  EXEC p_tblEpisodeEnemy_insert @EpisodeId = 1, @EnemyId = 1;
  EXEC p_tblEpisodeEnemy_insert @EpisodeId = 2, @EnemyId = 1;
@@ -125,6 +131,7 @@ AS BEGIN
   INSERT INTO [dbo].[tblEpisodeCompanion] (EpisodeId, CompanionId)
   VALUES (@EpisodeId, @CompanionId);
 END;
+GO
  
  EXEC p_tblEpisodeCompanion_insert @EpisodeId = 1, @CompanionId = 1;
  EXEC p_tblEpisodeCompanion_insert @EpisodeId = 2, @CompanionId = 1;
@@ -133,6 +140,6 @@ END;
  EXEC p_tblEpisodeCompanion_insert @EpisodeId = 4, @CompanionId = 3;
  EXEC p_tblEpisodeCompanion_insert @EpisodeId = 4, @CompanionId = 4;
  EXEC p_tblEpisodeCompanion_insert @EpisodeId = 5, @CompanionId = 4;
-
+ 
  Select * from tblEpisodeCompanion;
 Go
