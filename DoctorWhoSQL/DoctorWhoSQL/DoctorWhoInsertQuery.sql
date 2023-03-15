@@ -1,6 +1,8 @@
 -- procedure inserts a new enemy
 DROP PROCEDURE IF EXISTS p_tblEnemy_insert;
 GO
+USE DoctorWho
+go
 
 CREATE PROCEDURE p_tblEnemy_insert (@EnemyName VARCHAR(30), @Description VARCHAR(255))
 AS BEGIN
@@ -111,12 +113,15 @@ END;
 GO
  
  EXEC p_tblEpisodeEnemy_insert @EpisodeId = 1, @EnemyId = 1;
+ EXEC p_tblEpisodeEnemy_insert @EpisodeId = 1, @EnemyId = 2;
  EXEC p_tblEpisodeEnemy_insert @EpisodeId = 2, @EnemyId = 1;
  EXEC p_tblEpisodeEnemy_insert @EpisodeId = 2, @EnemyId = 2;
  EXEC p_tblEpisodeEnemy_insert @EpisodeId = 3, @EnemyId = 2;
  EXEC p_tblEpisodeEnemy_insert @EpisodeId = 3, @EnemyId = 3;
- EXEC p_tblEpisodeEnemy_insert @EpisodeId = 4, @EnemyId = 3;
+ EXEC p_tblEpisodeEnemy_insert @EpisodeId = 4, @EnemyId = 1;
  EXEC p_tblEpisodeEnemy_insert @EpisodeId = 4, @EnemyId = 4;
+ EXEC p_tblEpisodeEnemy_insert @EpisodeId = 5, @EnemyId = 1;
+ EXEC p_tblEpisodeEnemy_insert @EpisodeId = 5, @EnemyId = 3;
  EXEC p_tblEpisodeEnemy_insert @EpisodeId = 5, @EnemyId = 5;
 
  Select * from tblEpisodeEnemy;
@@ -137,9 +142,12 @@ GO
  EXEC p_tblEpisodeCompanion_insert @EpisodeId = 2, @CompanionId = 1;
  EXEC p_tblEpisodeCompanion_insert @EpisodeId = 2, @CompanionId = 2;
  EXEC p_tblEpisodeCompanion_insert @EpisodeId = 3, @CompanionId = 3;
- EXEC p_tblEpisodeCompanion_insert @EpisodeId = 4, @CompanionId = 3;
+ EXEC p_tblEpisodeCompanion_insert @EpisodeId = 4, @CompanionId = 1;
+ EXEC p_tblEpisodeCompanion_insert @EpisodeId = 4, @CompanionId = 2;
  EXEC p_tblEpisodeCompanion_insert @EpisodeId = 4, @CompanionId = 4;
- EXEC p_tblEpisodeCompanion_insert @EpisodeId = 5, @CompanionId = 4;
+ EXEC p_tblEpisodeCompanion_insert @EpisodeId = 5, @CompanionId = 1;
+ EXEC p_tblEpisodeCompanion_insert @EpisodeId = 5, @CompanionId = 2;
+ EXEC p_tblEpisodeCompanion_insert @EpisodeId = 5, @CompanionId = 3;
  
  Select * from tblEpisodeCompanion;
 Go
